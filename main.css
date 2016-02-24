@@ -1,0 +1,281 @@
+html { font-size: 62.5% }
+
+body {
+margin: 0;
+padding: 0;
+
+font-family: "Open Sans";
+Color: #37474F;
+font-size: 1.6rem;
+}
+
+.page-logo {
+	fill: #FFFFFF;
+	
+	position: absolute;
+	top: 10px;
+	left: 20px;
+}
+
+.page-header {
+position: absolute;
+width: 100%;
+
+padding: 20px;
+padding-top: 28px;
+box-sizing: border-box;
+} 
+
+.page-nav .hamburger {
+	border: 0;
+	background: 0;
+	fill: #FFFFFF;
+	
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	
+    width: 40px;
+	height: 40px;
+} 
+
+.page-nav .hamburger .hamburger-icon {
+width: 23px;
+}
+
+.page-nav .hamburger .close-icon {
+display: none;
+width: 16px;
+}
+
+.page-nav .navigation-menu {
+list-style: none;
+padding: 0;
+margin: 0;
+display: none;
+text-align: center;
+}
+.page-nav .navigation-menu li {
+	border-bottom: 1px solid #F5F7F8;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.page-nav .navigation-menu li a {
+	color: #000000;
+    text-decoration: none;
+	font-size: 1.4rem;
+}
+
+.page-nav .navigation-menu li.sign-up {
+	border: 0;
+	margin-top: 10px;
+}
+
+.page-nav .navigation-menu li.sign-up a {
+	border: 2px solid #00BAA5;
+	border-radius: 25px;
+	padding: 7px;
+	padding-right: 14px;
+	padding-left: 14px;
+}
+
+.page-header.nav-opened {
+	background: #FFFFFF;
+	box-shadow: -1px 9px 19px rgba(0, 0, 0, 0.5);
+}
+
+.page-header.nav-opened .page-logo {
+	fill: #000000;
+}
+
+.page-header.nav-opened .page-nav .hamburger {
+	fill: #000000;
+}
+
+.page-header.nav-opened .page-nav .hamburger .hamburger-icon {
+	display: none;
+}
+
+.page-header.nav-opened .page-nav .hamburger .close-icon {
+	display: inline-block;
+}
+
+.page-header.nav-opened .navigation-menu {
+	display: block;
+}
+
+.article .article-header {
+	background-image: url("Tahoe_North.jpg");
+    background-position: 60%;
+	color: #FFFFFF;
+	text-align: center;
+	
+	padding-top: 80px;
+	min-height: 72vh;
+}
+
+.article-title {
+margin: 0;
+font-weight: normal;
+font-size: 4.0rem;
+}
+
+.article-lead {
+	font-size: 1.8rem;
+	font-weight: 300;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.source {
+	font-size: 1.5rem;
+	padding-bottom: 15px;
+	font-weight: 300;
+}
+
+.article-title-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+}
+
+.article-sidebar {
+	border-top: 1px solid #ECEFF1;
+    border-bottom: 1px solid #ECEFF1;
+	
+	padding-top: 45px;
+    padding-bottom: 25px;
+	padding-left: 0;
+	padding-right: 0;
+	margin-top: 40px;
+    margin-bottom: 40px;
+	
+}
+
+.article-sidebar .article-picture {
+    margin: auto;
+    left: 0;
+    right: 0;
+	padding-left: 30px;
+	padding-right: 30px; 
+	max-width: 700px;	
+}
+
+.article-picture img {
+	max-width: 100%;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.article-sidebar .article-picture .caption,
+.article-sidebar p {
+font-size: 1.4rem;
+color: #78909C;
+font-style: italic;
+text-align: center;
+padding-left: 20px;
+padding-right: 20px;
+}
+
+.article-container {
+	padding: 15px;
+	line-height: 25px;
+}
+
+	.lead-two {
+    text-align: center;
+	font-size: 1.6rem;
+	padding-left: 20px;
+	padding-right: 20px;
+    } 
+
+.page-footer {
+	text-align: center;
+	background-color: #F5F7F8;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.page-footer .navigation-menu {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.page-footer .navigation-menu li {
+   margin-bottom: 30px;
+}
+
+.page-footer .navigation-menu li a {
+   color: #00BFA5;
+   text-decoration: none;
+}
+
+.page-footer .page-logo2 {
+	fill: #78909C;
+	margin-bottom: 20px;
+}
+
+.page-footer .copyright {
+	margin: 0;
+	color: #78909C;
+}
+
+/* RWD below - desktop. 40em to 640px, emy są powiązane z wielkością trzcionki dlatego są lepsze do 
+ładnego łamania się layoutu w RWD */
+
+@media (min-width: 40em) {
+	
+	.page-header{
+		max-width: 1000px;
+		margin: auto;
+		left: 0;
+		right: 0;
+	}
+	.page-nav .hamburger {
+		display: none;
+	}
+	.page-nav {
+		position: absolute;
+		top: 0px;
+		right: 20px;
+	}
+	.page-nav .navigation-menu {
+		display: block;
+	}
+	.page-nav .navigation-menu li {
+	 display: inline-block;
+	 border: 0;
+	}
+	.page-nav .navigation-menu li a {
+	    color: #FFFFFF;
+        margin-right: 42px;	
+	}
+	.page-nav .navigation-menu li.sign-up a {
+        border: 2px solid #FFFFFF;
+        border-radius: 25px;
+        margin: 0;
+    }
+	.article-content {
+		max-width: 900px;
+		margin: auto;
+	}
+	.article-container {
+        -moz-column-count: 2;
+        -webkit-column-count: 2;
+        column-count: 2;
+    }	
+	.article-container p {
+		margin-top: 0px;
+	}
+	
+	.article-sidebar p {
+    text-align: center;
+	font-size: 1.8rem;
+	font-weight: 300;
+    max-width: 900px;	
+	}
+}
