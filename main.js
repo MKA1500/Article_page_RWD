@@ -1,5 +1,8 @@
-var hamburger = document.querySelector(".hamburger");
-hamburger.addEventListener("click", function (){
-   document.querySelector(".page-header").classList.toggle("nav-opened");	
-   /* 'toggle' doda po kliknieciu nav-opened na page-headerze, jesli go tam wczesniej nie ma */
-}, false);
+$(document).ready(function() {
+	
+    $(".hamburger").bind('click', function () {
+		$(".page-header.nav-opened").fadeTo( "slow", 0.2 );
+		$(".page-header").toggleClass("nav-opened");
+        $(".page-header.nav-opened").fadeTo( "slow", 1 ); 
+	});
+});
