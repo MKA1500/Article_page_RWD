@@ -83,6 +83,7 @@ text-align: center;
 .page-header.nav-opened {
 	background: #FFFFFF;
 	box-shadow: -1px 9px 19px rgba(0, 0, 0, 0.5);
+	opacity: 0.1;
 }
 
 .page-header.nav-opened .page-logo {
