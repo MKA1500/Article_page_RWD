@@ -15,6 +15,7 @@ font-size: 1.6rem;
 	position: absolute;
 	top: 10px;
 	left: 20px;
+	opacity: 0.7;
 }
 
 .page-header {
@@ -41,6 +42,7 @@ box-sizing: border-box;
 
 .page-nav .hamburger .hamburger-icon {
 width: 23px;
+opacity: 0.7;
 }
 
 .page-nav .hamburger .close-icon {
@@ -83,7 +85,7 @@ text-align: center;
 .page-header.nav-opened {
 	background: #FFFFFF;
 	box-shadow: -1px 9px 19px rgba(0, 0, 0, 0.5);
-	opacity: 0.1;
+	opacity: 0.7;
 }
 
 .page-header.nav-opened .page-logo {
@@ -106,7 +108,9 @@ text-align: center;
 	display: block;
 }
 
-.article .article-header {
+
+
+.article-header-main {
 	background-image: url("Tahoe_North.jpg");
     background-position: 60%;
 	color: #FFFFFF;
@@ -114,10 +118,37 @@ text-align: center;
 	
 	padding-top: 80px;
 	min-height: 72vh;
+
 }
 
+.article-header-winter {
+	background-image: url("skier.jpg");
+    background-position: 60%;
+	color: #FFFFFF;
+	text-align: center;
+	
+	padding-top: 80px;
+	min-height: 72vh;
+	display: none;
+	
+}
+
+.article-header-summer {
+	background-image: url("big-summer.jpg");
+    background-position: 60%;
+	color: #FFFFFF;
+	text-align: center;
+	
+	padding-top: 80px;
+	min-height: 72vh;
+	display: none;	
+}
+
+
+
 .article-title {
-margin: 0;
+margin-right: 0;
+margin-left: 0;
 font-weight: normal;
 font-size: 4.0rem;
 }
