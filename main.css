@@ -166,10 +166,26 @@ font-size: 4.0rem;
 	font-weight: 300;
 }
 
+.article-title-photo {
+	width: 100%;
+	height: auto;
+}
+
+.art-ph-wrap {
+	width: auto;
+	height: auto;
+	display: inline;
+}
+
 .article-title-photo img {
-    width: 120px;
-    height: 120px;
-    border-radius: 100px;
+    height: 150px;
+    width: auto;
+	padding: 10px;
+	position: relative;
+}
+
+.article-title-photo img#sas-ba-sm {
+	display: none;
 }
 
 .article-sidebar {
@@ -256,10 +272,61 @@ padding-right: 20px;
 	color: #78909C;
 }
 
-/* RWD below - desktop. 40em to 640px, emy są powiązane z wielkością trzcionki dlatego są lepsze do 
-ładnego łamania się layoutu w RWD */
 
-@media (min-width: 40em) {
+
+@media (max-width: 900px) {
+	
+.article-title-photo img#sas-ba-bg {
+	display: none;
+}
+
+.article-title-photo img#sas-ba-sm {
+	display: inline;
+} 
+
+}
+
+@media (max-width: 730px) {
+
+.article-title-photo {
+	padding-bottom: 5px;
+}
+
+.art-ph-wrap {
+	display: block;
+}
+
+.article-title-photo img {
+    height: 120px;
+	padding: 5px;
+    width: auto;
+}
+
+.source {
+	display: none;
+}
+
+}
+
+@media (max-width: 615px) {
+	
+.article-title-photo img {
+    height: 115px;
+    width: auto;
+}	
+
+}
+
+@media (max-width: 375px) {
+	
+.article-title-photo img {
+    height: 110px;
+    width: auto;
+}	
+
+}
+
+@media (min-width: 640px) {
 	
 	.page-header{
 		max-width: 1000px;
