@@ -67,6 +67,7 @@ text-align: center;
 	color: #000000;
     text-decoration: none;
 	font-size: 1.4rem;
+	position: relative;
 }
 
 .page-nav .navigation-menu li.sign-up {
