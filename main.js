@@ -37,16 +37,17 @@ var loadPictures1 = function () {
 	}
 	
 	$('.art-ph-wrap').fadeTo('slow', 1);
-    new TimelineMax().from(summer1, 0.5, {rotation: 360, x: -800, y: 500, scale: 3}, "start")
-	                 .from(litter, 0.5, {rotation: -360, x: -1000, y: -500, scale: 3}, "-=0.4")
-					 .from(lummer, 1, {ease: Back.easeOut, opacity: 0, y: -400, borderRadius: 100, scale: 6}, "start")
-					 .from(temp, 0.6, {ease: Bounce.easeOut, x: 500}, "-=0.4");
+    new TimelineMax().from(summer1, 0.7, {rotation: 360, x: -800, y: 500, scale: 3}, "start")
+	                 .from(litter, 0.7, {rotation: -360, x: -1000, y: -500, scale: 3}, "-=0.4")
+					 .from(lummer, 1.2, {ease: Back.easeOut, opacity: 0, y: -400, borderRadius: 100, scale: 6}, "start")
+					 .from(temp, 1, {ease: Bounce.easeOut, x: 900}, "-=0.4");
 
 }
 
 
 var mainOff = function () {
 	$(".article-header-main").fadeTo( "slow", 0 ).css("display", "none");	
+	$(".art-ph-wrap").css("opacity", 0 );
 }
 
 var mainOn = function () {
@@ -59,7 +60,7 @@ var mainOn = function () {
 
 	setTimeout(function() {
 	loadPictures1();
-	}, 1000); 
+	}, 1800); 
   
 	 	 
 
@@ -122,12 +123,22 @@ var mainOn = function () {
 		} else if (view == 1) {
 		   $(".article-header-winter").fadeTo( "slow", 0 ).css("display", "none");		
 		   mainOn();			
-		}
+		} else if (view == 0){
+           $('.art-ph-wrap').fadeTo('fast', 0);
+		   
+		} 
         view = 0;
 		
 		wstawMaintitle();
-		loadPictures1();
-		
+	
+	setTimeout(function() {
+	loadPictures1();
+	if (view == 0) {
+		$('.art-ph-wrap').fadeTo( "slow", 1 );
+	} }, 1800); 
+	
+    view = 0;
+    	
 	});	
 	
 });
