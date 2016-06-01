@@ -2,13 +2,13 @@
 	 
 	$(".article-header-winter").css("opacity", 0 );
 	$(".article-header-summer").css("opacity", 0 );
-    $(".page-nav").css("opacity", 0 );
     $(".art-ph-wrap").css("opacity", 0 );	
 
 var viewport = $(window).width();
 var title = $('.article-title');
 var lead = $('.article-lead');
-var plogo = $('.page-logo'); 
+var pheader = $('#pheader'); 
+var source = $('.source');
 
 var navopened = false;
 var view = 0; // 0 == main; 1 == winter; 2 == summer;
@@ -16,12 +16,10 @@ var view = 0; // 0 == main; 1 == winter; 2 == summer;
 var wstawMaintitle = function () {
 new TimelineMax().from(title, 1.5, {ease: Back.easeOut, x: -900, opacity: 0}, "start")
 				 .from(lead, 1, {ease: Back.easeOut, x: 900, opacity: 0}, "start")
-				 .from(plogo, 2.2, {ease: Back.easeOut, x: -600, scale: 0}, "start")
-				 .from(".source", 2, {ease: Back.easeOut, y: -200, scale: 0}, 0.5, "start");
-	
-	setTimeout(function() {
-	$('.page-nav').fadeTo('slow', 1);
-	}, 100); 
+				 .from(source, 2, {ease: Back.easeOut, y: -200, scale: 0}, 0.5, "start"); 
+
+				 if (!$('#pheader').hasClass('nav-opened')) {
+				 new TimelineMax().from(pheader, 1.2, {ease: Back.easeOut.config(3), scale: 0}, "start"); }
 }
 
 var summer1 = $('#summer1');
