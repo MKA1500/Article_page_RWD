@@ -3,12 +3,13 @@
 <head>	
 <meta charset="utf-8">
  <title>Lake Tahoe RWD</title>
-  <meta name="Description" content="Wychodzimy od zadania z podręcznika" />
+  <meta name="Description" content="pole do eksperymentów" />
   <meta name="Keywords" content="test, strona testowa" />
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,700' rel='stylesheet' type='text/css' >   
   <link rel="stylesheet" href="main.css" media="screen">
   <meta name="viewport" content="width=device-width"> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.5/TweenMax.min.js"></script>
 </head>
 
 <body>
@@ -26,7 +27,7 @@
   </a>
   <nav class="page-nav">
     <ul class="navigation-menu">
-	  <li class="winter"><a href="#" title="Switch to Winter">Switch to Winter</a></li>
+	  <li class="winter"><a href="#" title="Switch to Winter" id="winternav">Switch to Winter</a></li>
 	  <li class="summer"><a href="#" title="Summer">Summer</a></li>
 	  <li class="api"><a href="#" title="Flickr API">{{not ready}}</a></li>
 	  <li class="sign-up"><a href="#" title="Sign up">Sign up</a></li>
@@ -58,18 +59,18 @@
     <article class="article">
 	
 	  <header class="article-header-main">
-	    <h2 class="article-title">Lake Tahoe</h2>
-		<p class="article-lead">Lake Tahoe is a major tourist attraction in both Nevada and California</p>
+	    <h2 class="article-title" >Lake Tahoe</h2>
+		<p class="article-lead" >Lake Tahoe is a major tourist attraction in both Nevada and California</p>
 		<div class="article-title-photo">
 		
 		<div class="art-ph-wrap">
-		    <a href="#"><img src="summer1.jpg" class="summer" title="Lake Tahoe in summer" /></a>
-		    <a href="#"><img src="little-winter.jpg" class="winter" title="Winter attractions" /></a>
+		    <a href="#" title="Lake Tahoe in summer" ><img src="summer1.jpg" id="summer1" class="summer" /></a>
+		    <a href="#" title="Winter attractions" ><img src="little-winter.jpg" id="little-winter" class="winter" /></a>
 		</div>
 		
 		<div class="art-ph-wrap">
-		    <a href="#"><img src="little-summer.jpg" class="api" title="Flickr API - to be completed..." /></a>
-		  <a href="#" http://sierratahoebigfoot.blogspot.com/" title="Sierra Tahoe Bigfoot Research">
+		    <a href="#" title="Flickr API - to be completed..." ><img src="little-summer.jpg" id="little-summer" class="api" /></a>
+		  <a href="http://sierratahoebigfoot.blogspot.com/" title="Sierra Tahoe Bigfoot Research">
 		    <img src="SAS_Banner2.jpg" id="sas-ba-bg" />
 			<img src="SAS_Ba-sm.jpg" id="sas-ba-sm" />
 		  </a>
