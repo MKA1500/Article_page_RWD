@@ -183,6 +183,7 @@ font-size: 4.0rem;
     width: auto;
 	padding: 10px;
 	position: relative;
+	border-radius: 15px;
 }
 
 .article-title-photo img#sas-ba-sm {
@@ -214,6 +215,7 @@ font-size: 4.0rem;
 .article-picture img {
 	max-width: 100%;
     text-align: center;
+	border-radius: 15px;
     margin: auto;
     left: 0;
     right: 0;
